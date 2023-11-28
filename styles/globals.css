@@ -3,6 +3,7 @@
 html,
 body {
   padding: 0;
+  width: 414px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -18,5 +19,9 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  background-color: rgb(223, 227, 228);
+}
+
+nav {
+  background-color: rgb(42, 91, 165);
 }
