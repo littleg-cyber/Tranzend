@@ -3,9 +3,8 @@ import InputAmount from '../components/SendRequest'; // Update the path based on
 
 const SendRequestPage = () => {
   // Function to handle the next step after getting the amount
-  const handleNextStep = (amount) => {
+  const handleNextStep = () => {
     // Perform actions for the next step here, e.g., proceed to the next page or process the amount
-    console.log('Amount received in SendRequestPage:', amount);
     // Further actions...
   };
 
