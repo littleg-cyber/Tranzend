@@ -1,12 +1,16 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
+/* Reset and Defaults */
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
-  width: 414px;
+  width: 393px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family:'Poppins', sans-serif;
 }
 
 a {
@@ -14,14 +18,137 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
+/* Layout and Structure */
 body {
   background-color: rgb(223, 227, 228);
 }
 
 nav {
   background-color: rgb(42, 91, 165);
+}
+
+/* Components and Sections */
+.lg-calculator-container{
+  display: flex;
+  justify-content: center; /* Horizontally center the calculator container */
+  align-items: center; /* Vertically center the calculator container */
+  height: 100vh; /* Or set an appropriate height */
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  /* Adjust the gap between buttons */
+  width: 335.49px;
+}
+
+/* Existing styles for .lg-calculator-container and .calculator remain the same */
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-section {
+  display: flex; /* Set as flex container */
+  align-items: center; /* Align items vertically */
+}
+
+.dollar-sign {
+  font-size: 30px; /* Adjust the size of the dollar sign */
+  font-weight: 600; /* Semi-bold */
+  font-family: 'Poppins', sans-serif; /* Poppins font */
+  margin-right: 5px; /* Adjust the space between the dollar sign and input */
+  line-height: 1;
+  display: inline-block;
+}
+
+.calculator input[type="text"] {
+  font-size: 24px; /* Increase font size for the input text */
+  margin-bottom: 10px; /* Add margin to separate input from buttons */
+}
+
+/* Additional styling for readonly input without border */
+.calculator input[type="text"][readonly] {
+  border: none; /* Remove the border */
+  background: transparent; /* Set a transparent background */
+  padding: 0; /* Remove any padding */
+  font-size: 32px; /* Adjust the font size if needed */
+  text-align: center;
+  font-weight: 600;
+  display: inline-block;
+}
+
+
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Horizontally center buttons */
+  gap: 10px; /* Adjust the gap between button groups */
+}
+
+.group1113 {
+  display: flex;
+  gap: 20px; /* Adjust the gap between buttons */
+}
+
+.group1113 button {
+  width: 103.83px; /* Set the width of the button */
+  height: 51.37px; /* Set the height of the button */
+  padding: 0; /* Remove padding to precisely set button dimensions */
+  font-size: 16px; /* Keep the button font size the same */
+  border-radius: 12px; /* Set border-radius for curved edges */
+  text-align: center;
+  flex: 1; /* Allow buttons to expand within the flex container */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+  background-color: rgba(55, 135, 255, 0.66); /* Set color with opacity */
+  border: none;
+  font-weight: bold; /* Set text to bold */
+  font-family: 'Gordita', sans-serif; /* Use Gordita font */
+}
+.send-request {
+  display: flex;
+  gap:8px;
+}
+.request-button {
+  width: 164px;
+  height: 42px;
+  border: 2px solid #000000; /* Replace #000000 with your desired stroke color */
+  background-color: transparent; /* Transparent background */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.send-button {
+  background-color: #4737FF; /* Fill color for the send button */
+  width: 164px; /* Adjust width */
+  height: 42px; /* Adjust height */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: 500; /* Set text to bold */
+}
+/* Specific Classes or Elements */
+.selectedPerson {
+  background-color: rgba(102, 172, 255, 0.4); /* 40% opacity for the color #66ACFF */
+  width: 335px;
+  border-radius: 13px; /* Adding a 13px border radius for curved corners */
+  overflow: hidden;
+}
+
+/* CSS for the people container */
+.people-container {
+  width: 335px;
+  
+}
+
+/* CSS for each person */
+.person {
+  width: 100%; /* Adjust this width according to your layout */
+  height: 60px;
+  /* Other styles for each person */
 }

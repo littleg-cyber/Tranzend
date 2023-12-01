@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NoAuth from '../components/NoAuth'; // TODO: COMMENT OUT FOR AUTH
+import NoAuth from '../components/NoAuth';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {

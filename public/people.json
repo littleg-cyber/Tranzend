@@ -1,0 +1,43 @@
+{
+  "people":[{
+    "ID": 0,
+    "name": "Grace",
+    "picture": "/i1.jpg",
+    "email": "grace@gmail.com",
+    "money": 50.00,
+    "me": true
+  },
+  {
+    "ID": 1,
+    "name": "William",
+    "picture": "/i2.jpg",
+    "email": "will@gmail.com",
+    "money": 30.20,
+    "me": false
+  },
+  {
+    "ID": 2,
+    "name": "Snoop",
+    "picture": "/i3.jpg",
+    "email": "snoopdg@gmail.com",
+    "money": 20.22,
+    "me": false
+  },
+  {
+    "ID": 3,
+    "name": "Penny",
+    "picture": "/i4.jpg",
+    "email": "penny@gmail.com",
+    "money": 7.00,
+    "me": true
+  },
+  {
+    "ID": 4,
+    "name": "Dwight",
+    "picture": "/i5.jpg",
+    "email": "dwight@gmail.com",
+    "money": 62.03,
+    "me": true
+  }
+  ]
+}
