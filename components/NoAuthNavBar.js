@@ -12,17 +12,17 @@ export default function LabelBottomNavigation() {
   const router = useRouter();
 
   const handleChange = (event, newValue) => {
-    const routes = ['/', '/history', '/sendRequest', '/schedule', '/profile'];
+    const routes = ['/', '/history', '/sendrequest', '/schedule', '/profile'];
 
     router.push(routes[newValue]);
   };
 
   return (
-    <BottomNavigation sx={{ width: 500 }} onChange={handleChange}>
+    <BottomNavigation sx={{ width: 400 }} onChange={handleChange}>
       <BottomNavigationAction label="Index" value={0} icon={<HomeIcon />} />
       <BottomNavigationAction label="History" value={1} icon={<HistoryIcon />} />
       <BottomNavigationAction label="Send/Request" value={2} icon={<CreditCardIcon />} />
-      <BottomNavigationAction label="Schedule" value={3} icon={<CalendarTodayIcon />} />
+      <BottomNavigationAction label="Schedule" value={3} icon={<CalendarTodayIcon sx={{ fontSize: 22 }} />} />
       <BottomNavigationAction label="Profile" value={4} icon={<AccountCircleIcon />} />
     </BottomNavigation>
   );

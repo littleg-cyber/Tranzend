@@ -1,0 +1,38 @@
+{
+  "payments":[{
+    "ID": 0,
+    "amount": 10.03,
+    "to": 0,
+    "from": 2,
+    "note": "From dinner the other night!"
+  },
+  {
+    "ID": 1,
+    "amount": 5,
+    "to": 4,
+    "from": 0,
+    "note": "Go buy some coffee"
+  },
+  {
+    "ID": 2,
+    "amount": 20.05,
+    "to": 0,
+    "from": 3,
+    "note": "Hedgehog's food"
+  },
+  {
+    "ID": 3,
+    "amount": 34.08,
+    "to": 3,
+    "from": 0,
+    "note": "for the concert"
+  },
+  {
+    "ID": 4,
+    "amount": 103.43,
+    "to": 0,
+    "from": 2,
+    "note": "utilities"
+  }
+  ]
+}

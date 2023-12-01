@@ -1,38 +1,30 @@
-// pages/sendRequest.js
-
 import React from 'react';
-import Head from 'next/head';
+import InputAmount from '../components/SendRequest'; // Update the path based on your file structure
 
-const SendRequestPage = () => (
-  <div
-    className="text-center d-flex flex-column justify-content-center align-content-center"
-    style={{
-      height: '90vh',
-      padding: '30px',
-      maxWidth: '400px',
-      margin: '0 auto',
-    }}
-  >
-    <Head>
-      <title>Send Request</title>
-      <meta name="description" content="Send Request Page" />
-      {/* Add other meta tags, CSS links, etc., as needed */}
-    </Head>
+const SendRequestPage = () => {
+  // Function to handle the next step after getting the amount
+  const handleNextStep = (amount) => {
+    // Perform actions for the next step here, e.g., proceed to the next page or process the amount
+    console.log('Amount received in SendRequestPage:', amount);
+    // Further actions...
+  };
 
-    <header>
-      <h1>Send Request Page</h1>
-      {/* Add a navigation component or links here if needed */}
-    </header>
-
-    <main>
-      <p>This page is currently under development.</p>
-      <p>Add your content here...</p>
-    </main>
-
-    <footer>
-      {/* Add footer content if needed */}
-    </footer>
-  </div>
-);
+  return (
+    <div
+      className="text-center d-flex flex-column justify-content-center align-content-center"
+      style={{
+        height: '90vh',
+        padding: '30px',
+        maxWidth: '400px',
+        margin: '0 auto',
+      }}
+    >
+      {/* Other components or layout */}
+      <h1>Send or Request</h1>
+      <InputAmount onNext={handleNextStep} />
+      {/* Other components or layout */}
+    </div>
+  );
+};
 
 export default SendRequestPage;
