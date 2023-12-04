@@ -26,6 +26,27 @@ function Home() {
         <div className="balance-text">
           Available balance <br />$103
         </div>
+        <div className="additional-text">
+          What would you like to do?
+        </div>
+        <div className="button-container">
+          <div className="button">
+            <span className="icon">Icon 1</span>
+            <span className="text">Add Money</span>
+          </div>
+          <div className="button">
+            <span className="icon">Icon 2</span>
+            <span className="text">Transfer</span>
+          </div>
+          <div className="button">
+            <span className="icon">Icon 3</span>
+            <span className="text">Send/Request</span>
+          </div>
+          <div className="button">
+            <span className="icon">Icon 4</span>
+            <span className="text">Help</span>
+          </div>
+        </div>
       </div>
     </div>
   );
