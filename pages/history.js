@@ -31,7 +31,7 @@ function HistoryPage() {
 
   return (
     <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
+      className="text-center d-flex flex-column justify-content-center align-content-center history-page-container"
       style={{
         height: '90vh',
         padding: '30px',

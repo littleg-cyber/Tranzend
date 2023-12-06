@@ -10,18 +10,19 @@ const SendRequestPage = () => {
 
   return (
     <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
+      className=" send-request-page text-center d-flex flex-column justify-content-center align-content-center"
       style={{
         height: '90vh',
-        padding: '30px',
         maxWidth: '400px',
         margin: '0 auto',
       }}
     >
-      {/* Other components or layout */}
-      <h1>Send or Request</h1>
-      <InputAmount onNext={handleNextStep} />
-      {/* Other components or layout */}
+      <div className="send-request-title">
+        <h1>Send or Request</h1>
+      </div>
+      <div>
+        <InputAmount onNext={handleNextStep} />
+      </div>
     </div>
   );
 };

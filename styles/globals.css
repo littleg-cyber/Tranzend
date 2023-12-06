@@ -123,9 +123,7 @@ nav {
 
 }
 
-
-
-.page-container {
+.home-page-container {
   height: 90vh; /* Set the height of the page container */
   max-width: 400px; /* Set maximum width for the page container */
   margin: 0 auto; /* Center the page container horizontally */
@@ -135,6 +133,32 @@ nav {
   background-color: rgb(223, 227, 228); /* Set the page background color */
 }
 
+.send-request-page {
+  background: #0961A1;
+}
+.send-request-title {
+  margin-bottom: 50px;
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Poppins';
+  font-size: 16px;
+}
+
+.send-request-styles {
+  background-color: white;
+  border-radius: 15px 15px 0 0;
+  max-height: 80vh; /* Limit the height of the card */
+  max-width: 400px; /* Set maximum width to 400px */
+  width: 100%;
+  margin: 0 auto; /* Center the div horizontally */
+}
+
+
+.history-page-container{
+  height: 90vh; /* Set the height of the page container */
+  max-width: 400px; /* Set maximum width for the page container */
+}
 body {
   margin: 0;
 }
