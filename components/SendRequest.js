@@ -18,47 +18,49 @@ const InputAmount = ({ onNext }) => {
   };
 
   return (
-    <div className="lg-calculator-container">
-      <div className="calculator">
-        <div className="input-section">
-          <span className="dollar-sign">$</span>
-          <input type="text" value={amount} readOnly />
-        </div>
-        <div className="numbers">
-          <div className="group1113">
-            <button type="button" onClick={() => handleNumberClick('1')}>1</button>
-            <button type="button" onClick={() => handleNumberClick('2')}>2</button>
-            <button type="button" onClick={() => handleNumberClick('3')}>3</button>
+    <div className="send-request-styles">
+      <div className="lg-calculator-container">
+        <div className="calculator">
+          <div className="input-section">
+            <input type="text" value={amount} readOnly />
           </div>
-          <div className="group1113">
-            <button type="button" onClick={() => handleNumberClick('4')}>4</button>
-            <button type="button" onClick={() => handleNumberClick('5')}>5</button>
-            <button type="button" onClick={() => handleNumberClick('6')}>6</button>
+          <div className="numbers">
+            <div className="group1113">
+              <button type="button" onClick={() => handleNumberClick('1')}>1</button>
+              <button type="button" onClick={() => handleNumberClick('2')}>2</button>
+              <button type="button" onClick={() => handleNumberClick('3')}>3</button>
+            </div>
+            <div className="group1113">
+              <button type="button" onClick={() => handleNumberClick('4')}>4</button>
+              <button type="button" onClick={() => handleNumberClick('5')}>5</button>
+              <button type="button" onClick={() => handleNumberClick('6')}>6</button>
+            </div>
+            <div className="group1113">
+              <button type="button" onClick={() => handleNumberClick('7')}>7</button>
+              <button type="button" onClick={() => handleNumberClick('8')}>8</button>
+              <button type="button" onClick={() => handleNumberClick('9')}>9</button>
+            </div>
+            <div className="group1113">
+              <button className="dotButton" type="button" onClick={() => handleNumberClick('.')}>.</button>
+              <button type="button" onClick={() => handleNumberClick('0')}>0</button>
+              <button className="deleteButton" type="button" onClick={() => handleBackspace()}>←</button>
+            </div>
           </div>
-          <div className="group1113">
-            <button type="button" onClick={() => handleNumberClick('7')}>7</button>
-            <button type="button" onClick={() => handleNumberClick('8')}>8</button>
-            <button type="button" onClick={() => handleNumberClick('9')}>9</button>
+          <br />
+          <div className="send-request">
+            <Link href={`/choosecontact?amount=${amount}&sent=false`} passHref>
+              <button className="request-button" type="button" onClick={() => handleSubmit()}>Request</button>
+            </Link>
+            <Link href={`/choosecontact?amount=${amount}&sent=true`} passHref>
+              <button className="send-button" type="button" onClick={() => handleSubmit()}>Send</button>
+            </Link>
           </div>
-          <div className="group1113">
-            <button className="dotButton" type="button" onClick={() => handleNumberClick('.')}>.</button>
-            <button type="button" onClick={() => handleNumberClick('0')}>0</button>
-            <button className="deleteButton" type="button" onClick={() => handleBackspace()}>←</button>
-          </div>
-        </div>
-        <br />
-        <div className="send-request">
-          <Link href={`/choosecontact?amount=${amount}&sent=false`} passHref>
-            <button className="request-button" type="button" onClick={() => handleSubmit()}>Request</button>
-          </Link>
-          <Link href={`/choosecontact?amount=${amount}&sent=true`} passHref>
-            <button className="send-button" type="button" onClick={() => handleSubmit()}>Send</button>
-          </Link>
+
         </div>
 
       </div>
-
     </div>
+
   );
 };
 

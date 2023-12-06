@@ -3,7 +3,7 @@ import Image from 'next/image';
 function Home() {
   const user = { displayName: 'Lucas' };
   return (
-    <div className="text-center d-flex flex-column justify-content-between align-items-end position-relative page-container">
+    <div className="text-center d-flex flex-column justify-content-between align-items-end position-relative home-page-container">
       <div className="content-container">
         <div className="card-container">
           <div className="welcome-message">

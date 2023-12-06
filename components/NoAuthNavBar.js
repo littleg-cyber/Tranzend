@@ -20,37 +20,39 @@ export default function LabelBottomNavigation() {
   };
 
   return (
-    <BottomNavigation value={value} onChange={handleChange}>
-      <BottomNavigationAction
-        label="Home"
-        value={0}
-        showLabel
-        icon={<HomeIcon sx={{ color: value === 0 ? '#0961A1' : 'black' }} />} // Apply color conditionally
-      />
-      <BottomNavigationAction
-        label="History"
-        value={1}
-        showLabel
-        icon={<HistoryIcon sx={{ color: value === 1 ? '#0961A1' : 'black' }} />} // Apply color conditionally
-      />
-      <BottomNavigationAction
-        label="Send/Request"
-        value={2}
-        showLabel
-        icon={<CreditCardIcon sx={{ color: value === 2 ? '#0961A1' : 'black' }} />} // Apply color conditionally
-      />
-      <BottomNavigationAction
-        label="Schedule"
-        value={3}
-        showLabel
-        icon={<CalendarTodayIcon sx={{ fontSize: '1.5rem', color: value === 3 ? '#0961A1' : 'black' }} />} // Apply color conditionally
-      />
-      <BottomNavigationAction
-        label="Profile"
-        value={4}
-        showLabel
-        icon={<AccountCircleIcon sx={{ color: value === 4 ? '#0961A1' : 'black' }} />} // Apply color conditionally
-      />
-    </BottomNavigation>
+    <div>
+      <BottomNavigation value={value} onChange={handleChange}>
+        <BottomNavigationAction
+          label="Home"
+          value={0}
+          showLabel
+          icon={<HomeIcon sx={{ color: value === 0 ? '#0961A1' : 'black' }} />}
+        />
+        <BottomNavigationAction
+          label="History"
+          value={1}
+          showLabel
+          icon={<HistoryIcon sx={{ color: value === 1 ? '#0961A1' : 'black' }} />}
+        />
+        <BottomNavigationAction
+          label="Send/Request"
+          value={2}
+          showLabel
+          icon={<CreditCardIcon sx={{ color: value === 2 ? '#0961A1' : 'black' }} />}
+        />
+        <BottomNavigationAction
+          label="Schedule"
+          value={3}
+          showLabel
+          icon={<CalendarTodayIcon sx={{ fontSize: '1.5rem', color: value === 3 ? '#0961A1' : 'black' }} />}
+        />
+        <BottomNavigationAction
+          label="Profile"
+          value={4}
+          showLabel
+          icon={<AccountCircleIcon sx={{ color: value === 4 ? '#0961A1' : 'black' }} />}
+        />
+      </BottomNavigation>
+    </div>
   );
 }
