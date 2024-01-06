@@ -19,20 +19,6 @@
     "to": 0,
     "from": 3,
     "note": "Hedgehog's food"
-  },
-  {
-    "ID": 3,
-    "amount": 34.08,
-    "to": 3,
-    "from": 0,
-    "note": "for the concert"
-  },
-  {
-    "ID": 4,
-    "amount": 103.43,
-    "to": 0,
-    "from": 2,
-    "note": "utilities"
   }
   ]
 }

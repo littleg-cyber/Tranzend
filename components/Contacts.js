@@ -5,21 +5,32 @@ import PropTypes from 'prop-types';
 function ContactsComponent({ onNext }) {
   const [people, setPeople] = useState([]);
   const [selectedDiv, setSelectedDiv] = useState(null);
+  const [isMounted, setIsMounted] = useState(true);
 
   useEffect(() => {
-    // Fetch the JSON data
+    setIsMounted(true);
     fetch('/people.json')
       .then((response) => response.json())
-      .then((data) => setPeople(data.people));
-  }, []);
+      .then((data) => {
+        if (isMounted) {
+          setPeople(data.people);
+        }
+      });
+
+    return () => {
+      setIsMounted(false);
+    };
+  }, [isMounted]);
 
   const handleClick = (personid) => {
     setSelectedDiv(personid);
-    onNext(personid);
+    if (isMounted) {
+      onNext(personid);
+    }
   };
 
   return (
-    <div className="people-container">
+    <div className="choose-contact-styles">
       {people.map((person) => (
         <div
           className={selectedDiv === person.ID ? 'selectedPerson row' : 'row'}
@@ -33,20 +44,20 @@ function ContactsComponent({ onNext }) {
           role="button" // Adding role="button" to indicate it's clickable
           tabIndex={person.ID}
         >
-          <div className="col-4">
-            <Image
-              className="gracespictureclass"
-              src={person.picture}
-              alt={person.name}
-              width={50}
-              height={50}
-            />
-          </div>
-          <div className="col-8">
-            <h3>{person.name}</h3>
-          </div>
-          <div className="col-12">
-            <p>Email: {person.email}</p>
+          <div className="people-container">
+            <div className="id-img">
+              <Image
+                className="profile-img"
+                src={person.picture}
+                alt={person.name}
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className="id-info">
+              <p className="id-name">{person.name}</p>
+              <p>{person.email}</p>
+            </div>
           </div>
         </div>
       ))}
