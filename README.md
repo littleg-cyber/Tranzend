@@ -29,7 +29,7 @@ Check out the video above for a demonstration of the app.
 
 ## Figma Prototype
 
-To view the Figma prototype of this project, follow this [link](https://www.figma.com/proto/3lEDIJJ5IefueHbFnk6AaH/TranZend-Prototype?type=design&node-id=60-151&t=seW8HxoMAvTJsq1g-1&scaling=scale-down&page-id=0%3A1&mode=design) 
+To view the Figma prototype of this project, follow this [link](https://www.figma.com/proto/3lEDIJJ5IefueHbFnk6AaH/TranZend-Prototype?type=design&node-id=5-136&t=b2VBar1jwjF5WPqT-1&scaling=scale-down&page-id=0%3A1&mode=design) 
 
 The prototype showcases the design and layout of the application.
 
