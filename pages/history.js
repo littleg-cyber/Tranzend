@@ -31,10 +31,9 @@ function HistoryPage() {
 
   return (
     <div
-      className="text-center d-flex flex-column justify-content-center align-content-center history-page-container"
+      className="choose-contact-page"
       style={{
         height: '90vh',
-        padding: '30px',
         maxWidth: '400px',
         margin: '0 auto',
       }}
@@ -46,42 +45,46 @@ function HistoryPage() {
       </Head>
 
       <header>
-        <h1>History Page</h1>
-
-        {recentPerson && (
-          <PaymentsComponent
-            name={recentPerson.name}
-            picture={recentPerson.picture}
-            comment={comment}
-            amount={amount}
-            sent={sent}
-          />
-        )}
-
-        {payments.map((payment) => {
-          const sents = payment.from === 0;
-          const lookupId = sents ? payment.to : payment.from;
-          const person = people.find((obj) => obj.ID === lookupId);
-
-          if (person === undefined) {
-            // If person is not found, handle accordingly
-            return <div>Loading...</div>;
-          } if (person === null) {
-            // Handle the case when person is null (if needed)
-            return <div>Person not found</div>;
-          }
-          return (
+        <div className="page-title">
+          <h1>History Page</h1>
+        </div>
+        <div className="history-styles">
+          <div>
+            {recentPerson && (
             <PaymentsComponent
-              key={payment.id} // Add a unique key for each component
-              name={person.name}
-              picture={person.picture}
-              comment={payment.note}
-              amount={payment.amount}
-              sent={sents}
+              name={recentPerson.name}
+              picture={recentPerson.picture}
+              comment={comment}
+              amount={amount}
+              sent={sent}
             />
-          );
-        })}
-        {/* Add a navigation component or links here if needed */}
+            )}
+
+            {payments.map((payment) => {
+              const sents = payment.from === 0;
+              const lookupId = sents ? payment.to : payment.from;
+              const person = people.find((obj) => obj.ID === lookupId);
+
+              if (person === undefined) {
+                // If person is not found, handle accordingly
+                return <div>Loading...</div>;
+              } if (person === null) {
+                // Handle the case when person is null (if needed)
+                return <div>Person not found</div>;
+              }
+              return (
+                <PaymentsComponent
+                  key={payment.id} // Add a unique key for each component
+                  name={person.name}
+                  picture={person.picture}
+                  comment={payment.note}
+                  amount={payment.amount}
+                  sent={sents}
+                />
+              );
+            })}
+          </div>
+        </div>
       </header>
 
       <main />

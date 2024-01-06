@@ -24,23 +24,24 @@ function ChooseCommentPage() {
   });
   return (
     <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
+      className="comment-page text-center d-flex flex-column justify-content-center align-content-center"
       style={{
         height: '90vh',
-        padding: '30px',
         maxWidth: '400px',
         margin: '0 auto',
       }}
     >
       <Head>
+
         <title>Send Comment</title>
-        <meta name="description" content="Profile Page" />
+        <meta name="description" content="Comment Page" />
         {/* Add other meta tags, CSS links, etc., as needed */}
       </Head>
 
       <header>
-        <h1>Send a Comment</h1>
-        {/* Add a navigation component or links here if needed */}
+        <div className="page-title">
+          <h1>Send a Money</h1>
+        </div>
       </header>
 
       <main>
@@ -50,9 +51,11 @@ function ChooseCommentPage() {
       </main>
 
       <footer>
-        <Link href={`/confirmation?amount=${amount}&contact=${contact}&comment=${comment}&sent=${sent}`} passHref>
-          <button className="send-button" type="button">Send</button>
-        </Link>
+        <div className="send-btn-card">
+          <Link href={`/confirmation?amount=${amount}&contact=${contact}&comment=${comment}&sent=${sent}`} passHref>
+            <button className="send-button" type="button">Send</button>
+          </Link>
+        </div>
       </footer>
     </div>
   );

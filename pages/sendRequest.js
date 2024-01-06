@@ -17,7 +17,7 @@ const SendRequestPage = () => {
         margin: '0 auto',
       }}
     >
-      <div className="send-request-title">
+      <div className="page-title">
         <h1>Send or Request</h1>
       </div>
       <div>

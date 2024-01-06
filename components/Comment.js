@@ -14,31 +14,30 @@ function CommentsComponent({
   };
 
   return (
-    <div className="comment-container">
-      <div className="row">
-        <div className="col-12">
-          <Image
-            className="gracespictureclass"
-            src={pictureUrl}
-            alt={name}
-            width={50}
-            height={50}
-          />
-        </div>
-        <div className="col-12">
-          <h3>{name}</h3>
-        </div>
-        <div className="col-12">
-          <p>Email: {email}</p>
-        </div>
-        <div className="commentInput">
-          <input
-            type="text"
-            value={comment}
-            onChange={handleInputChange}
-          />
-        </div>
+    <div className="confirmation-styles">
+      <div className="comment-id">
+        <Image
+          className="comment-id-photo"
+          src={pictureUrl}
+          alt={name}
+          layout="fixed"
+          width={75}
+          height={75}
+          objectFit="cover"
+        />
+        <h3>{name}</h3>
+        <p>{email}</p>
       </div>
+      <div className="commentInput">
+        <input
+          type="text"
+          placeholder="What's this for?"
+          style={{ width: '336px', height: '112px' }}
+          value={comment}
+          onChange={handleInputChange}
+        />
+      </div>
+
     </div>
 
   );

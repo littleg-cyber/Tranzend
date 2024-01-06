@@ -7,25 +7,27 @@ function PaymentsComponent({
 }) {
   return (
     <div
-      className="row"
+      className="payments-container"
     >
-      <div className="col-4">
-        <Image
-          className="gracespictureclass"
-          src={picture}
-          alt={name}
-          width={50}
-          height={50}
-        />
+      <div className="payment-details-img">
+        <div className="id-img">
+          <Image
+            className="profile-img"
+            src={picture}
+            alt={name}
+            width={40}
+            height={40}
+          />
+        </div>
+        <div className="col-5">
+          <h4>{name}</h4>
+        </div>
+        <div className="col-3">
+          <p>{comment}</p>
+        </div>
       </div>
-      <div className="col-5">
-        <h3>{name}</h3>
-      </div>
-      <div className="col-3">
-        <p>{amount}</p>
-      </div>
-      <div className="col-12">
-        <p className={sent === false ? 'green' : 'red'}>{comment}</p>
+      <div className="payment-details-amount">
+        <p className={sent === false ? 'green' : 'red'}>{amount}</p>
       </div>
 
     </div>

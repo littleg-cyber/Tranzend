@@ -16,23 +16,24 @@ function ChooseContactPage() {
   };
   return (
     <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
+      className="choose-contact-page text-center d-flex flex-column justify-content-center align-content-center"
       style={{
         height: '90vh',
-        padding: '30px',
         maxWidth: '400px',
         margin: '0 auto',
       }}
     >
       <Head>
         <title>Choose contact</title>
+
         <meta name="description" content="Profile Page" />
         {/* Add other meta tags, CSS links, etc., as needed */}
       </Head>
 
       <header>
-        <h1>choose contact</h1>
-        {/* Add a navigation component or links here if needed */}
+        <div className="page-title">
+          <h1>Send Money</h1>
+        </div>
       </header>
 
       <main>
@@ -40,9 +41,11 @@ function ChooseContactPage() {
       </main>
 
       <footer>
-        <Link href={`/addcomment?amount=${amount}&contact=${id}&sent=${sent}`} passHref>
-          <button className="send-button" type="button">Send</button>
-        </Link>
+        <div className="send-btn-card">
+          <Link href={`/addcomment?amount=${amount}&contact=${id}&sent=${sent}`} passHref>
+            <button className="send-button" type="button">Send</button>
+          </Link>
+        </div>
       </footer>
     </div>
   );
